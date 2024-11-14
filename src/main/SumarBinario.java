@@ -1,11 +1,18 @@
 public class SumarBinario {
-    public static String sumarBinario(String num1, String num2) {
+    public static String sumaBinario(String num1, String num2) {
         String res = "";
         int suma;
         int llevo = 0;
-        int tamaño = Math.max(num1.length(), num2.length());
 
-        for (int i = tamaño - 1; i >= 0; i--) {
+        while (num1.length() < num2.length()) {
+            num1 = "0" + num1;
+         }
+
+        while (num1.length() > num2.length()) {
+            num2 = "0" + num2;
+        }
+
+        for (int i = num1.length() - 1; i >= 0; i--) {
             int digitoA = Integer.parseInt("" + num1.charAt(i));
             int digitoB = Integer.parseInt("" + num2.charAt(i));
 
@@ -35,6 +42,6 @@ public class SumarBinario {
         String num1 = "1111";
         String num2 = "0110";
 
-        System.out.println(sumarBinario(num1, num2));
+        System.out.println(sumaBinario(num1, num2));
     }
 }

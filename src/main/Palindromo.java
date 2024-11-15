@@ -13,7 +13,7 @@ public class Palindromo {
     }
 
     public static void main(String[] args) {
-        String cadena = "abba";
+        String cadena = "abca";
 
         System.out.println(esPalindromo(cadena));
     }

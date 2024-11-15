@@ -8,13 +8,12 @@ public class Parentesis {
                 contador++;
             } else if (cadena.charAt(i) == ')') {
                 contador--;
+                if (contador == 0) {
+                    esParentizada = true;
+                } else {
+                    esParentizada = false;
+                }
             }
-        }
-
-        if (contador == 0) {
-            esParentizada = true;
-        } else {
-            esParentizada = false;
         }
         return esParentizada;
     }

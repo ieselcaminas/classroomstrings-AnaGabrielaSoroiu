@@ -3,6 +3,9 @@ public class SumarBinario {
         String res = "";
         int suma;
         int llevo = 0;
+        int digitoA;
+        int digitoB;
+
 
         while (num1.length() < num2.length()) {
             num1 = "0" + num1;
@@ -13,8 +16,8 @@ public class SumarBinario {
         }
 
         for (int i = num1.length() - 1; i >= 0; i--) {
-            int digitoA = Integer.parseInt("" + num1.charAt(i));
-            int digitoB = Integer.parseInt("" + num2.charAt(i));
+            digitoA = Integer.parseInt("" + num1.charAt(i));
+            digitoB = Integer.parseInt("" + num2.charAt(i));
 
             suma = digitoA + digitoB + llevo;
 
